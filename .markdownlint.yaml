@@ -1,0 +1,5 @@
+# markdownlint config for Asdale Dynamics, LLC — AI Moving and Relocation Guide
+# MD013 (line length) disabled: prose, URLs, and code spans are intentionally
+# left unwrapped; all other default rules apply.
+default: true
+MD013: false

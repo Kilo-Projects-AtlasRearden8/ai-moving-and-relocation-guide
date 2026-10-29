@@ -1,0 +1,241 @@
+/* Asdale Dynamics, LLC — AI Moving and Relocation Guide
+   Simple, warm, beginner-friendly styles. Print-friendly. */
+
+:root {
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --bg: #ffffff;
+  --soft: #f3f4f6;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: underline; }
+a:hover { color: var(--accent-hover); }
+
+/* Header */
+
+header {
+  background: var(--soft);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.site-title a { color: var(--ink); text-decoration: none; }
+.site-title a:hover { color: var(--accent); }
+
+.site-tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Navigation */
+
+nav {
+  background: var(--ink);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav li { margin: 0; }
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #374151;
+  color: #fff;
+}
+
+nav a.active {
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Main content */
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+main h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+}
+
+main h3 {
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+main p { margin: 0 0 1rem; }
+main ul, main ol { margin: 0.5rem 0 1rem; padding-left: 1.25rem; }
+main li { margin: 0.35rem 0; }
+
+main blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: var(--soft);
+  color: var(--ink);
+}
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+main th, main td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+main th { background: var(--soft); }
+
+main code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+main pre {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.highlight {
+  background: #fef3c7;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* Privacy callout */
+
+.privacy {
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  background: #fbfdfe;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.privacy strong { color: var(--ink); }
+
+/* Checkbox lists */
+
+main ul.tasks li, main ol.tasks li { margin: 0.4rem 0; }
+
+/* Footer */
+
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--soft);
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-inner a { color: var(--accent); text-decoration: underline; }
+
+/* Printable planner pages */
+
+.print-page {
+  page-break-after: always;
+}
+.print-page:last-child {
+  page-break-after: auto;
+}
+
+/* Print styles */
+
+@media print {
+  body { background: #fff; color: #000; }
+  header, nav, footer, .no-print { display: none !important; }
+  main { max-width: 100%; padding: 0; }
+  main h2 { border-bottom: 1px solid #000; }
+  a { text-decoration: none; color: #000; }
+  table, tr { break-inside: avoid; }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  main { padding: 1.25rem 0.75rem; }
+  nav ul { flex-direction: column; }
+  nav a { border-bottom: 1px solid #374151; }
+}
