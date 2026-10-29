@@ -48,6 +48,7 @@ A beginner manual and static HTML site on using AI for moving and relocation, pu
 - No test runner or build script exists in this project (static site + Markdown manuals); verification is lint + the verify.py script.
 - No secrets/API keys/personal data present (verify.py grep-confirmed absent).
 - Local AI app recommendations (Ollama, LM Studio) are mentioned but not bundled or tested in this repo.
+- Latest commit: `a6bacd5` — README improved with clearer structure and privacy details.
 
 ## Known gaps
 
